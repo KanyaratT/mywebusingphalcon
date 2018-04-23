@@ -1,0 +1,8 @@
+[Sun, 08 Apr 18 01:42:01 +0700][ERROR] [0]: Table 'event' doesn't exist in database when dumping meta-data for Event
+
+[Sun, 08 Apr 18 14:13:37 +0700][ERROR] [0]: Column 'event_number' doesn't belong to any of the selected models (1), when preparing: SELECT [Event].* FROM [Event] WHERE event_number = '' LIMIT :APL0:
+
+[Sun, 08 Apr 18 14:14:48 +0700][ERROR] [0]: Column 'event_number' doesn't belong to any of the selected models (1), when preparing: SELECT [Event].* FROM [Event] WHERE event_number = '' LIMIT :APL0:
+
+[Sun, 08 Apr 18 18:23:33 +0700][ERROR] [23000]: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@a' for key 'username'
+

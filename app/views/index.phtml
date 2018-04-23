@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phalcon PHP Framework</title>
+    <!-- ************************** e d i t  t h e m e *************************** -->
+    <?php echo $this->assets->outputCss('styles'); ?>     
+    <?php echo $this->assets->outputJs('scripts'); ?> 
+	<!-- ********************************************************************** -->
+	
+  </head>
+
+    <body id="page-top" >
+
+<body class="">
+
+		<!-- Header -->
+    <header id="header" class="alt">
+        <div class="logo"><a href="index.html">BUPPHESANNIVAS <span>by Kanyarat</span></a>
+      </div>
+      <a href="#menu" class="toggle"><span>Menu</span></a>
+			</header>
+		<!-- Nav -->
+
+		<!-- Banner -->
+		<!--
+			To use a video as your background, set data-video to the name of your video without
+			its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+			formats to work correctly.
+    -->
+			<section id="banner" data-video="images/banner">
+				<div class="inner">
+					<h1>Welcome to Ayutthaya</h1>
+					<p>Ayutthaya’s urban grid layout may seem simple enough,</br>
+					but you will find yourself easily lost once you make a wrong turn.</br>
+					Come and join us here !</br>
+					if you don't have any account click this button below.</br></p><br>
+					<a href="authen/signUp" class="button special scrolly"> Join ! </a>
+        </div>
+        <video controls muted autoplay="" loop="" ><source src="img/banner.mp4" type="video/mp4"><source src="img/banner.webm" type="video/webm"></video></section>
+		</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div>
+						<div class="box">
+							<div class="content">
+								<header class="align-center">
+								<div class="container"><?php echo $this->getContent(); ?></div> </header>
+							</div>
+						</div>
+					</div>
+
+			</section>
+
+		<!-- Three -->
+			<section id="about" class="wrapper style2">
+
+				<div class="inner">
+					<div class="grid-style">
+
+						<div class="box">
+
+							<center>
+							<img src="https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/29027593_10211839792538871_2131356324976394240_n.jpg?_nc_cat=0&_nc_eui2=v1%3AAeGUrr0vEK9fRt2oevgDbyl60Pd3MbuMlvPxndkF_JuYEf8h5AEsN7h06psIB28brArXiujGI-y4tJtqpK97jLqR9fGXDW1lNoqHKdEwLcJGRw&oh=259b0ee1244f4891b5fa371462f7ccb8&oe=5B6D5DC8" alt=""  width=450px heigh=450px >
+							</center>
+
+						</div>
+
+						<div>
+							<div class="box">
+
+								<div class="content">
+									<header class="align-center">
+										<h2>ABOUT ME ;</h2>
+										<p>welcome to my space ;</p>
+									</header>
+									<hr />
+									<p> My name is Kanyarat Tangkokiattikul,Call me Ice. </p>
+									<p> My Student ID is 590610601.</p>
+									<p> I'm student of CMU in Faculty of Engineering , <br>Computer Engineering.</br></p>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+
+		<!-- Four -->
+			<section id="four" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<h2>CONTACT</h2>
+
+					<a href="https://facebook.com/"> ►Facebook</a><a href="https://twitter.com"> ►Twitter </a><a href="https://instagram.com"> ►Instagram </a></p>
+						<p>Tel : 012-3456789</p>
+						<p>Email : admin@gmail.com</p>
+					</header>
+
+				</div>
+			</section>
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.scrolly.min.js"></script>
+			<script src="js/jquery.scrollex.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
+
+     <li class="nav-item mx-0 mx-lg-1">
+       <a href="authen/signUp" class="btn btn-outline-info"> Sign Up </a>
+      </li>
+
+<nav id="menu" class="visible">
+				<ul class="links">
+
+					<li><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="profile"><h3>Hello ! ,<br><?php echo $this->session->get('memberEmail');?></a></h3></li> 
+
+					<br>
+					<li><a href="authen" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Home</a></li>
+					<li><a href="#about" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">About</a></li>
+					<li><a href="event" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Events</a></li>
+					<li><a href="#four" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Contact</a></li>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+
+				   <?php if($this->session->has('memberauthen')) {?> 
+					<li><a href="authen" class="button alt">Login</a></li>
+					<li><a href="authen/signOut" class="button alt">Logout</a></li>
+					<?php } else {?>
+						<li><a href="authen" class="button alt">Login</a></li>
+						<li><a href="authen/signOut" class="button alt">Logout</a></li>
+				<?php }?>					
+
+				</ul>
+			<a href="#menu" class="close" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></a></nav>
+
+  </body>
+  
+</html>

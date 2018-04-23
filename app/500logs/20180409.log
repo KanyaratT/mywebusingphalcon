@@ -1,0 +1,28 @@
+[Mon, 09 Apr 18 03:17:41 +0700][ERROR] [0]: Column 'xxx' doesn't belong to any of the selected models (1), when preparing: SELECT [Event].* FROM [Event] WHERE xxx LIMIT :APL0:
+
+[Mon, 09 Apr 18 03:24:07 +0700][ERROR] [0]: Column 'test1' doesn't belong to any of the selected models (1), when preparing: SELECT [Event].* FROM [Event] WHERE test1 LIMIT :APL0:
+
+[Mon, 09 Apr 18 03:31:23 +0700][ERROR] [0]: Column 'test1' doesn't belong to any of the selected models (1), when preparing: SELECT [Event].* FROM [Event] WHERE test1 LIMIT :APL0:
+
+[Mon, 09 Apr 18 04:06:39 +0700][ERROR] [0]: Syntax error, unexpected token IDENTIFIER(Homework), near to ' Algo LIMIT :APL0:', when parsing: SELECT [Event].* FROM [Event] WHERE Do  Homework Algo LIMIT :APL0: (66)
+
+[Mon, 09 Apr 18 04:11:30 +0700][ERROR] [0]: Syntax error, unexpected token IDENTIFIER(Homework), near to ' Algo LIMIT :APL0:', when parsing: SELECT [Event].* FROM [Event] WHERE Do  Homework Algo LIMIT :APL0: (66)
+
+[Mon, 09 Apr 18 04:12:15 +0700][ERROR] [0]: Column 'xxx' doesn't belong to any of the selected models (1), when preparing: SELECT [Event].* FROM [Event] WHERE xxx LIMIT :APL0:
+
+[Mon, 09 Apr 18 05:01:32 +0700][ERROR] [0]: Syntax error, unexpected token IDENTIFIER(Homework), near to ' Algo LIMIT :APL0:', when parsing: SELECT [Event].* FROM [Event] WHERE Do  Homework Algo LIMIT :APL0: (66)
+
+[Mon, 09 Apr 18 05:02:25 +0700][ERROR] [0]: Column 'xxx' doesn't belong to any of the selected models (1), when preparing: SELECT [Event].* FROM [Event] WHERE xxx LIMIT :APL0:
+
+[Mon, 09 Apr 18 05:02:38 +0700][ERROR] [0]: Column 'xxx' doesn't belong to any of the selected models (1), when preparing: SELECT [Event].* FROM [Event] WHERE xxx LIMIT :APL0:
+
+[Mon, 09 Apr 18 05:05:53 +0700][ERROR] [0]: Syntax error, unexpected token IDENTIFIER(Homework), near to ' Algo LIMIT :APL0:', when parsing: SELECT [Event].* FROM [Event] WHERE Do  Homework Algo LIMIT :APL0: (66)
+
+[Mon, 09 Apr 18 05:41:32 +0700][ERROR] [0]: Column 'xxx' doesn't belong to any of the selected models (1), when preparing: SELECT [Event].* FROM [Event] WHERE xxx LIMIT :APL0:
+
+[Mon, 09 Apr 18 12:52:57 +0700][ERROR] [0]: Syntax error, unexpected token LIMIT, near to ' :APL0:', when parsing: SELECT [Event].* FROM [Event] WHERE id= LIMIT :APL0: (52)
+
+[Mon, 09 Apr 18 12:53:26 +0700][ERROR] [0]: Syntax error, unexpected token LIMIT, near to ' :APL0:', when parsing: SELECT [Event].* FROM [Event] WHERE e_name= LIMIT :APL0: (56)
+
+[Mon, 09 Apr 18 13:14:29 +0700][ERROR] [0]: Column 'asdasd' doesn't belong to any of the selected models (1), when preparing: SELECT [Event].* FROM [Event] WHERE e_name=asdasd LIMIT :APL0:
+

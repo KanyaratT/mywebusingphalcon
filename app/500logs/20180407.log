@@ -1,0 +1,2 @@
+[Sat, 07 Apr 18 22:13:46 +0700][ERROR] [23000]: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'ice@a' for key 'username'
+

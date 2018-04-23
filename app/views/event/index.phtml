@@ -1,0 +1,118 @@
+
+<html><head>
+		<title>Elements - Transitive by TEMPLATED</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="public/css/main.css">
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
+	    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+	    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+
+        <!-- <script type="text/javascript" src="http://services.iperfect.net/js/IP_generalLib.js"> -->
+	</head>
+		<!-- Header -->
+
+	<body class="subpage">
+			<header id="header">
+				<div class="logo"><a href="index.html">Transitive <span>by TEMPLATED</span></a></div>
+				<a href="#menu" class="toggle"><span>Menu</span></a>
+			</header>
+
+    <div class="container container-form">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><br><h2> :: EVENT LISTS </h2></div>
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "event_db";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT e_name, e_date, e_des FROM event";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+
+    echo "<table><tr><th><br><h3>: Lists</th><th><br><h3>: Date</th><th><br><h3>: Description</th><th><br><h2><center>  </center></th><th><h2><br> </h2></th></tr>";
+	// output data of each row
+?>
+<?php   
+ while($row = $result->fetch_assoc()) {
+?>
+
+		<tr><td><?php echo $row["e_name"]?></td>
+		<td><?php echo $row["e_date"]?></td>
+		<td><?php echo $row["e_des"]?></td>
+
+		<td><a href='event/edit/?name=<?php echo $row["e_name"]?>&text=<?php echo $row["e_des"]?>'><input type='submit' name='e_edit' id='e_edit' value='Edit'></a></td>
+		<td><a href='event/delete/<?php echo $row["e_name"]?>'><input type='submit' name='eId' id='eId' value='Delete'></a></td>
+		
+<?php
+	}
+?><?php
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+                        </tr>
+                    </thead>
+				</table> 
+				
+
+				<br><br>
+				<li class="button"> <a href="event/addtable" class="btn btn-outline-info"> +add event </a></li>
+
+        </div>
+      </div>
+    </div>  
+
+        <!-- Scripts -->
+        <script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollex.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/main.js"></script>
+
+<nav id="menu" class="visible">
+				<ul class="links">
+
+					<li><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="profile"><h3>Hello ! ,<br><?php echo $this->session->get('memberEmail');?></a></h3></li> 
+
+					<br>
+					<li><a href="profile" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Home</a></li>
+					<li><a href="#about" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">About</a></li>
+					<li><a href="event" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Events</a></li>
+					<li><a href="#four" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Contact</a></li>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+
+				   <?php if($this->session->has('memberauthen')) {?> 
+					<li><a href="authen" class="button alt">Login</a></li>
+					<li><a href="authen/signOut" class="button alt">Logout</a></li>
+					<?php } else {?>
+						<li><a href="authen" class="button alt">Login</a></li>
+						<li><a href="authen/signOut" class="button alt">Logout</a></li>
+				<?php }?>					
+
+				</ul>
+            <a href="#menu" class="close" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></a></nav>
+			
+
+
+
+</body></html>
+

@@ -1,0 +1,113 @@
+<html lang="en"><head>
+
+<html><head>
+		<title>Elements - Transitive by TEMPLATED</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="public/css/main.css">
+        <!-- <script type="text/javascript" src="http://services.iperfect.net/js/IP_generalLib.js"> -->
+	</head>
+	<body class="subpage">
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Transitive <span>by TEMPLATED</span></a></div>
+				<a href="#menu" class="toggle"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+            <!-- Form -->
+
+
+<div class="form-group">
+                                <br>
+    							<h2>:: EDIT EVENT FORM</h2>
+
+									<form method="post" action="#">
+
+<div class="row uniform">
+<label><h4>Event name : </h4></label>
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="e_Name" class="form-control" id="e_Name"  placeholder="Name" value="<?php echo $_GET["name"]?>" required>
+<br><div class="row uniform">                                           
+<label><h4>Date and Time : </h4></label>                                          
+
+  										<div class="form-group">
+										  <input type="date" name="e_Date" class="form-control" id="e_Date" placeholder="datepicker" required> 
+										</div>
+
+  <div class="row uniform">  
+<br><label><h4>Description : </h4></label>
+											<!-- Break -->
+											<div class="form-group">
+												<input type="text" name="e_Des" id="e_Des" class="form-control" value="<?php echo $_GET["text"]?>" rows="4" required>
+                                           
+<br><div class="row uniform"> 
+<br><label><h4>Picture : </h4></label></div>
+    <div class="custom-file">
+          <input type="file" name="e_Img" id="e_Img" class="custom-file-input"  >
+          <label class="custom-file-label" >Choose file</label>
+    </div>
+
+											<!-- Break -->
+											<br><br><br><div class="row uniform"> 
+											<div class="wrapper style2">
+
+											<button href="authen/signOut/<?php echo $_GET["name"]?>" type="submit" class="login100-form-btn">
+												Enter
+											</button>
+                                            </div>                               						
+
+</form>
+
+		<!-- Scripts -->
+        	<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.scrolly.min.js"></script>
+			<script src="js/jquery.scrollex.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
+
+<nav id="menu" class="visible">
+				<ul class="links">
+
+					<li><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="profile"><h3>Hello ! ,<br><?php echo $this->session->get('memberEmail');?></a></h3></li> 
+
+					<br>
+					<li><a href="<?php echo $this->url->getBaseUri(); ?>" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Home</a></li>
+					<li><a href="<?php echo $this->url->getBaseUri(); ?>index#about" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">About</a></li>
+					<li><a href="event" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Events</a></li>
+					<li><a href="#four" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Contact</a></li>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+
+				   <?php if($this->session->has('memberauthen')) {?> 
+					<li><a href="authen" class="button alt">Login</a></li>
+					<li><a href="authen/signOut" class="button alt">Logout</a></li>
+					<?php } else {?>
+						<li><a href="authen" class="button alt">Login</a></li>
+						<li><a href="authen/signOut" class="button alt">Logout</a></li>
+				<?php }?>					
+
+				</ul>
+            <a href="#menu" class="close" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></a></nav>
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<!--===============================================================================================-->
+	<script src="js/main_login.js"></script>
+
+
+
+</body></html>
